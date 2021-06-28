@@ -1,0 +1,652 @@
+/* COLORS $ FONTS */
+:root{
+	--grey: rgb(81, 85, 99);
+	--black: rgb(15, 16, 33);
+	--blue: rgb(52, 73, 94);
+	--lightskyblue: rgb(235, 247, 255);
+	--darkpinkish: rgb(237, 84, 133);
+	--note_background: rgb(235, 247, 255);
+	--lightgrey: rgb(81, 85, 99);
+	--footer_text: rgb(160, 163, 166);
+}
+
+@font-face {	
+	font-family: regular;
+	src: url(fonts/MavenPro-Regular.ttf);
+}
+
+@font-face {	
+	font-family: medium;
+	src: url(fonts/MavenPro-Medium.ttf);
+}
+
+
+/* ------- GENERAL ------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: regular; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: regular; 
+	font-weight: 100;
+}
+
+
+/* ------- HEADER ------- */
+header {
+	max-width: 900px;
+	margin: auto;
+	padding: 1rem 0.5rem 0;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.main_logo {
+	max-width: 25%;
+	float: left;
+}
+
+.main_logo img { max-width: 90%; }
+
+header nav {
+	width: 75%;
+	float: left;
+}
+
+header ul {
+	max-width: 90%;
+	margin: auto;
+	padding: .8rem 0;
+	float: right;
+	overflow: hidden;
+}
+
+header li {
+	margin: 0 0.9rem;
+	float: left;
+	list-style: none;
+}
+
+header a {
+	font-family: medium;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 0.9rem;
+}
+
+.menu_bar { display: none; }
+
+
+/* ------- CALLBACK SECTION ------- */
+.callback {
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.callback_text {
+	flex: 1 0 35%;	
+	padding-top: 7rem;
+}
+
+.callback_text h1 {
+	position: relative;
+	margin-left: 2rem;
+	padding-top: 1rem;
+	font-size: 3rem;
+	font-family: regular;
+}
+
+.callback_text h1::after {
+	content: '';
+	width: 135%;
+	height: 0;
+	border-top: 0.7rem solid black;
+	position: absolute;
+	top: -1rem;
+	left: -2rem;
+}
+
+.callback_text a {
+	display: inline-block;
+	margin-left: 2rem;
+	margin-top: 1rem;
+	padding: 0.7rem 1.5rem;
+	border-radius: 2.2px;
+	text-decoration: none;
+	color: white;
+	background-color: var(--darkpinkish); 
+}
+
+.callback_text a:hover { opacity: 0.9; }
+
+.callback_img { flex: 1 0 65%; }
+
+.callback_img img { width: 100%; }
+
+
+/* ------- MAIN SECTION ------- */
+.main_section_heading {
+	background: var(--blue);
+	margin: 3rem 0 3.5rem;
+	padding: 1.5rem 0;
+}
+
+.request_button2 { display: none; }
+
+h2 {
+	padding-bottom: 1.5rem;
+	font-size: 1.8rem;
+	text-align: center;
+	letter-spacing: 0.05rem;
+	color: #fff;
+	position: relative;
+}
+
+h2::after {
+	content: '';
+	width: 5.5rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	border: 0.5px solid #E0E7E9;
+	opacity: 0.5;
+}
+
+.homes {
+	max-width: 1000px;
+	margin: 0 auto 0.5rem;
+	padding: 0 4rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.homes > div[class*='home-'] {
+	flex: 0 0 49%;
+	margin-bottom: 3rem;
+}
+
+.home_details_container { position: relative; }
+
+.home_details_container img{
+	display: block;
+	width: 100%;
+	object-fit: contain;
+}
+
+.home_details {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.home_details ul {
+	width: 85%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+	font-size: 0.9rem;
+	color: #fff;
+}
+
+.home_details ul li { padding: 1rem 0; }
+
+.home_info ul {
+	padding: 0.5rem 0;
+	display: flex;
+	justify-content: center;
+	flex-flow: row nowrap;
+	background-color: var(--lightskyblue);
+}
+
+.home_info li:first-child { font-family: medium; }
+
+.home_info li {
+	padding: 0.1rem 1rem;
+	list-style-type: none; 
+	color: var(--grey);
+	border-right: 1px solid var(--grey);
+}
+
+.home_info li:last-child { border: none; }
+
+.home_info li i { color: var(--darkpinkish); }
+
+
+/* ------- REALTOR SECTION ------- */
+.realtor_section {
+	padding: 1rem 0 2rem;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	align-items: center;
+	position: relative;
+	color: #fff;
+	background: url(../img/realtor-hero1_720.jpg) no-repeat center 70%;
+	background-size: 100%;
+}
+
+.realtor_section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(15, 16, 33, 0.6); 
+}
+
+.realtor_img { 
+	flex: 1 1 50%;
+	padding-right: 1rem;
+	z-index: 9999;
+}
+
+.realtor_img img {
+	width: 9rem;
+	float: right;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.realtor_info {
+	flex: 1 1 50%;
+	z-index: 99;
+	padding-left: 1rem;
+	font-size: 1.2rem;
+}
+
+.realtor_info > div { display: inline-block; }
+
+.realtor_name {
+	margin: 0 0 1.5rem;
+	padding: 1.5rem 0 2rem;
+	overflow: visible;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	position: relative;
+}
+
+.realtor_name::after {
+	content: '';
+	width: 6.5rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	border: 0.5px solid #E0E7E9;
+	opacity: 0.5;
+}
+
+.realtor_id, .realtor_number {
+	padding: 0.15rem 0;
+	text-align: center;
+}
+
+.realtor_info a {
+	display: block;
+	width: 70%;
+	margin: 1rem auto 0;
+	padding: 0.6rem 1.5rem;
+	border-radius: 2.5px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	background: var(--darkpinkish);
+}
+
+.realtor_info a:hover { opacity: 0.9; }
+
+
+/* ------- NOTE SECTION ------- */
+.note_section { background: var(--lightskyblue); }
+
+.note_section p {
+	max-width: 90%;
+	margin: auto;
+	padding: 2rem;
+	line-height: 1.5rem;
+	font-size: 0.9rem;
+	color: var(--lightgrey);
+}
+
+
+/* ------- FOOTER ------- */
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--grey);
+	background: var(--blue);
+}
+
+footer * {
+	font-size: 0.9rem;
+	color: var(--footer_text);
+}
+
+.footer_top, .footer_bottom { flex: 1 1 50%; }
+
+.footer_top {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 1.7rem;
+	position: relative;
+	align-items: center;
+	color: #fff;
+}
+
+.footer_logo, .contact_calculator {
+	flex: 1 1 26%;
+	text-align: center;
+}
+
+.footer_text {
+	flex: 1 1 48%;
+	text-align: center;
+	line-height: 170%;
+}
+
+.footer_logo img { width: 50%; }
+
+.contact_calculator {
+	display: flex;
+	justify-content: center;
+}
+
+.contact_calculator > div {
+	flex: 0 1 30%;
+	padding: 0.5rem 0;
+}
+
+.contact_calculator > div a { text-decoration: none; }
+
+.footer_bottom p {
+	display: inline-block;
+	padding: 1.3rem 0;
+	word-spacing: 0.1rem;
+	text-align-last: center;
+	line-height: 140%;
+	border-top: 1px solid rgb(160, 163, 166);
+}
+
+.footer_bottom i { color: var(--darkpinkish); }
+
+.footer_bottom a { text-decoration: none; }
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* ------- TABLET ------- */
+@media screen and (max-width: 870px) {
+
+	/* ------- HEADER ------- */
+	header { padding: 0.5rem; }
+
+	.main_logo{
+		max-width: 100%;
+		float: none;
+	}
+
+	.main_logo a { display: block; }
+
+	.main_logo img {
+		display: block;
+		width: 28%;
+		margin: auto;
+		padding: 0.5rem 0;
+	}
+
+	header nav {
+		width: 100%;
+		padding: .5rem 0;
+	}
+
+	header ul {
+		max-width: 80%;
+		display: flex;
+		justify-content: space-around;	
+		float: none;
+	}
+
+	header li {
+		float: left;
+		font-size: 0.9rem;
+		letter-spacing: 0.1rem;
+	}
+
+
+	/* ------- CALLBACK SECTION ------- */
+	.callback { max-width: 800px; }
+
+	.callback_text { padding-top: 3rem; }
+
+	.callback_text h1 {
+		padding-top: 1.5rem;
+		font-size: 2.2rem;
+		line-height: 135%;
+	}
+
+	.callback_text h1::after {
+		width: 150%;
+		border-top: 0.9rem solid black;
+	}
+
+	.callback_text a { margin-top: 1.5rem; }
+
+
+	/* ------- MAIN SECTION ------- */
+	.main_section_heading { margin: 2.5rem 0 4rem; }
+
+	.homes { padding: 0 1.5rem; }
+
+	.homes > div[class*='home-'] { flex: 0 0 48%; }
+
+	.home_info ul { padding: 1rem 0; }
+
+	.home_info li {
+		font-size: 1.2rem;
+		font-family: regular;
+	}
+
+
+	/* ------- REALTOR SECTION ------- */
+	.realtor_img img { width: 8rem; }
+
+
+	/* ------- FOOTER  SECTION ------- */
+
+	.footer_top { padding: 2rem; }
+
+	.contact_calculator { flex-direction: column; }
+
+	.footer_bottom { padding-bottom: 2rem; }
+}
+
+
+/* ------- Smartphone ------- */
+@media screen and (max-width: 767px) {
+
+	/*------ HEADER ------*/
+	header { padding: 0.5rem 0; }
+
+	.main_logo {
+		width: 70%;
+		padding: 0 1rem;
+		float: left;
+	}
+
+	.main_logo img {
+		width: 200px;
+		margin: 0;
+		padding: 0;
+	}
+
+	header nav { display: none; }
+
+	.menu_bar {
+		display: block;
+		padding: 1rem;
+		float: right;
+		font-size: 1.5rem;
+	}
+
+
+	/* ------- CALLBACK SECTION ------- */
+	
+	.callback { flex-direction: column-reverse; }
+
+	.callback_text {
+		flex: 1 1 100%;
+		padding-top: 0;
+	}
+
+	.callback_text h1 { padding: 0.5rem 3rem 2rem; }
+
+	.callback_text h1::after {
+		width: 0;
+		height: 200%;
+		top: -40%;
+		left: 0;
+		z-index: 9999;
+		border-top: none;
+		border-left: 0.9rem solid var(--darkpinkish);
+	}
+
+	.callback_text a { display: none; }
+
+	.callback_img { flex: 1 1 100%; }
+	
+
+	/* ------- MAIN SECTION------- */
+	.main_section_heading{ padding: 0.5; }
+	
+	.request_button2 {
+		display: block;
+		width: 13rem;
+		margin: 1.5rem auto 0;
+		padding: 0.7rem;
+		border-radius: 2.2px;
+		text-align: center;
+		text-decoration: none;
+		color: white;
+		background: var(--darkpinkish);
+	}
+	
+	.request_button2:hover { opacity: 0.9; }
+
+	.homes {
+		flex-direction: column;
+		padding: 0 1rem;
+	}
+
+	.homes > div[class*='home-'] {
+		flex: 1 1 49%;
+		margin-bottom: 3rem;
+	}
+
+	.home_details ul {
+		width: 25rem;
+		padding: 0.5rem 0;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.home_details ul li { padding: 0.2rem 0.3rem; }
+
+	.home-6 .home_info ul li:first-child { padding: 0 0.8rem; }
+
+
+	/* ------- REALTOR SECTION ------ */
+	.realtor_section {
+		flex-direction: column;
+		padding: 2rem;
+		background-position: top;
+		background-size: cover;
+	}
+
+	.realtor_img { 
+		flex: 1 1 100%;
+		padding: 0;
+	}
+
+	.realtor_img img{ width: 7rem; }
+
+	.realtor_info { flex: 1 1 100%; }
+
+	.realtor_name {
+		margin: 0.5rem 0 1.5rem;
+		padding: 1rem 0;
+	}
+
+	.realtor_id, .realtor_number {
+		font-weight: bold;
+		letter-spacing: 0.08rem;
+	}
+
+	.realtor_info a {
+		width: 55%;
+		margin-top: 1.5rem;
+		padding: 0.7rem 0;
+		font-size: 1rem;
+	}
+
+	/* ------- NOTE SECTION ------- */
+	.note_section p {
+		padding: 1.5rem 1rem;
+		line-height: 1.2rem;
+	} 
+
+
+	/* ------- FOOTER ------- */
+	footer { padding: 2rem 2.5rem; }
+
+	.footer_top {
+		flex-direction: column;
+		padding: 0 0 1.5rem;
+	}
+
+	.footer_logo img { width: 70%; }
+
+	.footer_text { padding: 0.5rem 0; }
+
+	.footer_text p { line-height: 1.3rem; }
+
+	.contact_calculator {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.contact_calculator>div { padding: 0.5rem; }
+
+	.footer_bottom {
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer_bottom p{
+		margin: auto;
+		padding:  1.5rem 0 0;
+	}
+}

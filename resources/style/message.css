@@ -1,0 +1,389 @@
+/* COLORS $ FONTS */
+:root{
+	--grey: rgb(81, 85, 99);
+	--black: rgb(15, 16, 33);
+	--blue: rgb(52, 73, 94);
+	--lightskyblue: rgb(235, 247, 255);
+	--darkpinkish: rgb(237, 84, 133);
+	--note_background: rgb(235, 247, 255);
+	--lightgrey: rgb(81, 85, 99);
+	--footer_text: rgb(160, 163, 166);
+}
+
+@font-face {	
+	font-family: regular;
+	src: url(fonts/MavenPro-Regular.ttf);
+}
+
+@font-face {	
+	font-family: medium;
+	src: url(fonts/MavenPro-Medium.ttf);
+}
+
+
+/* ------- GENERAL ------- */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: regular; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: regular; 
+	font-weight: 100;
+}
+
+
+/* ------- HEADER ------- */
+header {
+	padding: 1rem 0.5rem;
+	max-width: 900px;
+	margin: auto;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.main_logo {
+	max-width: 25%;
+	float: left;
+}
+
+.main_logo img { max-width: 90%; }
+
+header nav {
+	width: 75%;
+	float: left;
+}
+
+header ul {
+	max-width: 90%;
+	margin: auto;
+	float: right;
+	padding: 1rem 0;
+	overflow: hidden;
+}
+
+header li {
+	list-style: none;
+	float: left;
+	margin: 0 0.9rem;
+}
+
+header a {
+	font-family: medium;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 1rem;
+}
+
+.menu_bar { display: none; }
+
+
+/* ------- CONTACT HEADER ------- */
+.contact_header {
+	width: 100%;
+	padding: 12rem 0 6rem;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/message_hero.jpg) 100% 55%;
+	background-size: cover;
+}
+
+.contact_header > div {
+	max-width: 1100px;
+	margin: auto;
+	padding-left: 3rem;
+	color: white;
+}
+
+.contact_header h1 {
+	padding-bottom: 1rem;
+	font-size: 4rem;
+}
+
+.contact_header p {
+	font-size: 1.2rem;
+	line-height: 140%;
+}
+
+
+/* ------- CONTACT BODY ------ */ 
+.contact_body { background: rgba(249, 250, 251); }
+
+.contact_container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 3rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.contact_container h2 {
+	margin-bottom: 1.7rem;
+	padding: 1rem 0;
+	position: relative;
+	font-size: 1.8rem;
+}
+
+.contact_container h2::after {
+	content: '';
+	display: block;
+	width: 6.5rem;
+	border: 1px solid var(--darkpinkish);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.form_subsection { flex: 0 1 48%; }
+
+form { width: 100%; }
+
+input, textarea {
+	margin-bottom: 1.5rem;
+	padding: 0.9rem 1rem;
+	float: left;
+	outline: none;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+input:focus, textarea:focus{ border-color: rgb(160, 160, 160); }
+
+input {	width: 47%; }
+
+input:first-child { margin-right: 6%; }
+
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+input:last-child {
+	width: 30%;
+	padding: 0.8rem 0;
+	font-size: 1.3rem;
+	color: white;
+	background: var(--darkpinkish);
+}
+
+.map_subsection { flex: 0 1 48%; }
+
+.map_subsection figure { width: 100%; } 
+
+.map_subsection img { width: 100%; }
+
+figcaption {
+	color: var(--darkpinkish);
+	font-weight: bold;
+	text-align: right;
+}
+
+
+/* ------- FOOTER ------- */
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--grey);
+	background: var(--blue);
+}
+
+footer * {
+	font-size: 0.9rem;
+	color: var(--footer_text);
+}
+
+.footer_top, .footer_bottom { flex: 1 1 50%; }
+
+.footer_top {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 1.7rem;
+	position: relative;
+	align-items: center;
+	color: #fff;
+}
+
+.footer_logo, .contact_calculator {
+	flex: 1 1 26%;
+	text-align: center;
+}
+
+.footer_text {
+	flex: 1 1 48%;
+	text-align: center;
+	line-height: 170%;
+}
+
+.footer_logo img { width: 50%; }
+
+.contact_calculator {
+	display: flex;
+	justify-content: center;
+}
+
+.contact_calculator > div {
+	flex: 0 1 30%;
+	padding: 0.5rem 0;
+}
+
+.contact_calculator > div a { text-decoration: none; }
+
+.footer_bottom p {
+	display: inline-block;
+	padding: 1.3rem 0;
+	border-top: 1px solid rgb(160, 163, 166);
+	word-spacing: 0.1rem;
+	text-align-last: center;
+	line-height: 140%;
+}
+
+.footer_bottom i { color: var(--darkpinkish); }
+
+.footer_bottom a { text-decoration: none; }
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* ------- TABLET ------- */
+@media screen and (max-width: 870px) {
+
+	/* ------- HEADER ------- */
+	header { padding: 0.5rem; }
+
+	header ul { padding: 0.2rem; }
+
+	.main_logo{
+		max-width: 100%;
+		float: none;
+	}
+
+	.main_logo a { display: block; }
+
+	.main_logo img {
+		display: block;
+		width: 28%;
+		margin: auto;
+		padding: 0.5rem 0;
+	}
+
+	header nav {
+		width: 100%;
+		padding: .5rem 0;
+	}
+
+	header ul {
+		max-width: 80%;
+		display: flex;
+		justify-content: space-around;	
+		float: none;
+	}
+
+	header li {
+		float: left;
+		font-size: 0.9rem;
+		letter-spacing: 0.1rem;
+	}
+
+
+	/* ------- FOOTER  SECTION ------- */
+	.footer_top { padding: 2rem; }
+
+	.contact_calculator { flex-direction: column; }
+
+	.footer_bottom { padding-bottom: 2rem; }
+
+}
+
+
+/* ------- SMARTPHONE ------- */
+@media screen and (max-width: 767px) {
+	header { padding: 0.5rem 0; }
+
+	.main_logo {
+		width: 70%;
+		padding: 0 1rem;
+		float: left;
+	}
+
+	.main_logo img {
+		width: 200px;
+		margin: 0;
+		padding: 0;
+	}
+
+	header nav { display: none; }
+
+	.menu_bar {
+		display: block;
+		padding: 1rem;
+		float: right;
+		font-size: 1.5rem;
+	}
+
+
+	/* ------- CONTACT HEADER ------- */
+	.contact_header > div {
+		padding: 0 1rem;
+		background-position: 40% 90%;
+	}
+
+	.contact_header h1 { 
+		font-size: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+
+	/* ------- CONTACT BODY ------ */ 
+	.contact_container {
+		flex-direction: column;
+		padding: 3rem 1rem;
+	}
+
+	input, textarea { width: 100%; }
+
+	input:last-child { width: 35%; }
+
+
+	/* ------- FOOTER ------- */
+	footer { padding: 2rem 2.5rem; }
+
+	.footer_top {
+		padding: 0 0 1.5rem;
+		flex-direction: column;
+	}
+
+	.footer_logo img { width: 70%; }
+
+	.footer_text { padding: 0.5rem 0; }
+
+	.footer_text p { line-height: 1.3rem; }
+
+	.contact_calculator {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.contact_calculator > div { padding: 0.5rem; }
+
+	.footer_bottom {
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer_bottom p{
+		margin: auto;
+		padding:  1.5rem 0 0;
+	}
+
+}
+

@@ -224,6 +224,9 @@ h2::after {
 	padding: 0.1rem 1rem;
 	list-style-type: none; 
 	color: var(--grey);
+}
+
+.home_info li:not(:last-child) {
 	border-right: 1px solid var(--grey);
 }
 
